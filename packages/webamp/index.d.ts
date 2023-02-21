@@ -251,6 +251,17 @@ export default class Webamp {
   public reopen(): void;
 
   /**
+   * Close a specific Webamp window.
+   * @param windowId "main", "playlist", "equalizer", "milkdrop"
+   */
+  public closeWindow(windowId: string): void;
+
+  /**
+   * Toggle the doublesize mode.
+   */
+  public toggleDoublesize(): void;
+
+  /**
    * A callback which will be called when Webamp is minimized.
    *
    * @returns An "unsubscribe" function. Useful if at some point in the future you want to stop listening to these events.

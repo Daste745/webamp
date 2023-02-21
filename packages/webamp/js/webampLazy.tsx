@@ -380,6 +380,14 @@ class Webamp {
     this.store.dispatch(Actions.open());
   }
 
+  closeWindow(windowId: string): void {
+    this.store.dispatch(Actions.closeWindow(windowId));
+  }
+
+  toggleDoublesize(): void {
+    this.store.dispatch(Actions.toggleDoubleSizeMode());
+  }
+
   onTrackDidChange(cb: (trackInfo: LoadedURLTrack | null) => void): () => void {
     let previousTrackId: number | null = null;
     // TODO #leak
